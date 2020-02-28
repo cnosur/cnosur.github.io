@@ -1,0 +1,274 @@
+body, html, #window {
+width: 100vw;
+height: 100vh;
+color: white;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+float: left; 
+overflow:hidden;
+padding: 0;
+margin: 0;
+}
+
+html { 
+  background: url(https://i.imgur.com/59lPQZ7.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 6.305vh; 
+  letter-spacing: 5pt;
+  text-shadow: 2px 2px 20px #000000;
+}
+
+h2 {
+  font-size: 2vh;
+  letter-spacing: 5.5pt;
+  margin: -10px auto 0px auto ;
+  text-align: center;
+  text-justify: inter-word;
+  text-shadow: 1px 1px 20px #000000;
+}
+
+h3 {
+  font-size: 2vh;
+  letter-spacing: 4pt;
+  margin: -10px auto 0px auto ;
+  text-align: center;
+  text-justify: inter-word;
+  text-shadow: 1px 1px 20px #000000;
+}
+
+.header {
+  width: 440px;
+  margin: 0 auto;
+}
+
+.main {
+  height: 100vh;
+}
+
+.half {
+  position: relative;
+  float: left;
+}
+
+.footer {
+  width: 400px; 
+  margin: 20px auto;
+}
+
+.devicon {
+  margin-right: 28px;
+  margin-left: 28px
+}
+
+.main-social-ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 0;
+  list-style-type: none;
+  height: 30px;
+  width: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-social-icon {
+    color: #fff;
+    background: black;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+    margin: 0 12px;
+    padding: 15px;
+    border-radius: 50%;
+    border-color: white;
+    border-width: .5px;
+    border-style: solid;
+    transition: all 150ms ease-in-out;
+}
+    
+.main-social-icon:hover {
+      background: white;
+      color: #151c28;
+}
+
+.portalItem {
+      position: relative;
+      box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.025),
+            2px 2px 5px 2px rgba(0, 0, 0, 0.25) inset;
+      margin: 15px auto;
+      border: 3px solid black;
+      background-color: black; 
+      font-size: 1em;
+      overflow: hidden;
+      height: 40px;
+      width: 440px;
+      box-shadow: 1px 1px 5px #000000;
+    
+}
+    
+.portalItem img {
+      display: block;
+      width: 100%;
+      margin: -20px auto 0 auto;
+      position: relative;
+      transition: all 0.2s ease-out;
+      z-index: 10;
+      opacity: 0;
+}
+    
+.portalItem a {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      
+    }
+    
+.portalItem a span {
+      display: block;
+      background: black;
+      color: #fff;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      height: 0;
+      /* overflow: hidden; */
+      /* opacity: 50;
+      transition: all 0.2s ease-out; */
+      z-index: 8; 
+}
+    
+.portalItem a:hover img {
+      opacity: 100;
+}
+    
+.portalItem p {
+      text-align: center;
+      margin-top: 12px;
+      font-family: "Open Sans", sans-serif;
+      letter-spacing: 1px;
+}
+    
+a:link {
+  text-decoration: none;
+}
+    
+a:visited {
+  text-decoration: none;
+}
+
+#icons {
+    margin: 20pt auto 20pt auto;
+    font-size:15pt;
+    text-align: center;
+}
+  
+#links {
+    padding: 25px 0 30px 188px;
+    font-size: 60pt;
+    z-index: 100;
+}
+  
+#container{
+    margin-left:-38px;
+}
+  
+#copyright{
+    color:white; 
+}
+
+
+
+/* PRELOAD PAGE */
+
+#loadPage {
+  width: 100%; height: 100%;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  overflow: hidden;
+  z-index: 50;
+}
+
+#loadPage::before {
+  content: '';
+  display: block;
+  width: 100%; height: 50%;
+  position: absolute;
+  left: 0; bottom: 0;
+  background: #000000;
+  animation: 1s 2.6s forwards ease-out slideUp;
+}
+
+#loadPage::after {
+  content: '';
+  display: block;
+  width: 100%; height: 50%;
+  position: absolute;
+  left: 0; top: 0;
+  background: #000000;
+  animation: 1s 2.6s ease-out forwards slideDown;
+}
+
+.count {
+
+  position: absolute;
+  width: 100%;
+  margin-top: 45vh;
+  text-align: center; 
+  z-index: 55;
+  animation: 2.6s ease-in-out forwards loadingBar;
+}
+
+.count::after {
+  content: '';
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  border-bottom: 3px solid #ededed;
+  transform-origin: 0 50%;
+  transform: scale3d(0,1,1);
+  animation: 2.6s ease-in-out forwards loadingBar;
+}
+
+.content {
+  animation-duration: 1s;
+  animation-delay: 3.1s;
+}
+
+@keyframes slideUp {
+  to { transform: translate3d(0, 100%, 0); }
+}
+
+@keyframes slideDown {
+  to { transform: translate3d(0, -100%, 0); }
+}
+
+@keyframes loadingBar {
+  to { transform: scale3d(1,1,1); }
+  98%   { opacity: 1; }
+  99%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
+
+@-webkit-keyframes slideUp {
+  to { transform: translate3d(0, 100%, 0); }
+}
+
+@-webkit-keyframes slideDown {
+  to { transform: translate3d(0, -100%, 0); }
+}
+
+@-webkit-keyframes loadingBar {
+  to { transform: scale3d(1,1,1); }
+  98%   { opacity: 1; }
+  99%   { opacity: 0; }
+  100%  { opacity: 0; }
+}
